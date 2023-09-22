@@ -5,7 +5,6 @@
 
 #allTasks, #allCompletedTasks {
 	text-align: left;
-	text-overflow: ellipsis;
 	min-height:100px;
 	background-color: #aefcb6;
 	border-radius: 10px;
