@@ -3,22 +3,15 @@
 }
 
 
-#allTasks {
-	text-align: center;
+#allTasks, #allCompletedTasks {
+	text-align: left;
+	text-overflow: ellipsis;
 	min-height:100px;
 	background-color: #aefcb6;
 	border-radius: 10px;
 	padding: 1px;
 }
 
-
-#allCompletedTasks {
-	text-align: center;
-	min-height:100px;
-	background-color: #aefcb6;
-	border-radius: 10px;
-	padding: 1px;
-}
 
 
 li {
@@ -53,7 +46,7 @@ li {
 }
 
 .task, .completedTask {
-	cursor: pointer;
+
 	position: relative;
 	padding: 12px 8px 12px 40px;
 	list-style-type: none;
@@ -62,10 +55,7 @@ li {
 	font-size: 18px;
 	transition: 0.2s;
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+
 }
 
 
