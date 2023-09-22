@@ -72,15 +72,17 @@ function createTask(task, id) {
 	let newTask = document.createElement("li");
 	let newTaskName = document.createTextNode(task.name);
 	if (task.isChecked) {
-		document.getElementById("completedTasks").appendChild(newTask);
+		document.getElementById("allCompletedTasks").appendChild(newTask);
 	}
 	else {
-		let newTaskCompleteB = document.createElement("button");
-		newTaskCompleteB.innerHTML = "COMPLETE";
-		newTaskCompleteB.className = "completeTask";
-		newTask.appendChild(newTaskCompleteB);
-		document.getElementById("tasks").appendChild(newTask);
-		newTaskCompleteB.addEventListener("click", function(event) {
+		let completeSpan = document.createElement("span");
+		let complete = document.createElement("button");
+		complete.innerHTML = "v";
+		completeSpan.className = "completeTask";
+		completeSpan.appendChild(complete);
+		newTask.appendChild(completeSpan);
+		document.getElementById("allTasks").appendChild(newTask);
+		complete.addEventListener("click", function(event) {
 			checkTask(newTask, id);
 		});
 	}
@@ -108,7 +110,7 @@ function getLocalStorage() {
 
 function checkTask(task, id) {
 	task.parentNode.removeChild(task)
-	document.getElementById("completedTasks").appendChild(task);
+	document.getElementById("allCompletedTasks").appendChild(task);
 	let completeB = task.getElementsByTagName('button')[0];
 	completeB.parentNode.removeChild(completeB);
 	task.setAttribute("class", "completedTask");

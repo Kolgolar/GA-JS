@@ -1,3 +1,33 @@
+* {
+ font-family: Arial;
+}
+
+
+#allTasks {
+	text-align: center;
+	min-height:100px;
+	background-color: #aefcb6;
+	border-radius: 10px;
+	padding: 1px;
+}
+
+
+#allCompletedTasks {
+	text-align: center;
+	min-height:100px;
+	background-color: #aefcb6;
+	border-radius: 10px;
+	padding: 1px;
+}
+
+
+li {
+	max-width:450px;
+	word-wrap: break-word;
+	padding-left: 0;
+}
+
+
 .evenButton {
 	background-color:rgb(255, 100, 100);
 }
@@ -11,30 +41,24 @@
 .mainHeadline {
 	text-align: center;
 	height:100px;
-	background-color: rgb(0, 255, 0);
+	background-color: #aefcb6;
+	border-radius: 10px;
+	padding: 1px;
 }
 
-.task {
-	cursor: pointer;
-	position: relative;
-	padding: 12px 8px 12px 40px;
-	list-style-type: none;
-	background: #eee;
+.shesh {
+	height: 25px;
+	width: 120px;
 	font-size: 18px;
-	transition: 0.2s;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }
 
-.completedTask {
+.task, .completedTask {
 	cursor: pointer;
 	position: relative;
 	padding: 12px 8px 12px 40px;
 	list-style-type: none;
-	background: #eee;
+	height: auto;
+	
 	font-size: 18px;
 	transition: 0.2s;
 
@@ -47,9 +71,9 @@
 
 .completeTask {
   position: absolute;
-  left: -90px;
+  left: 0;
   top: 0;
-  height: 44px;
+  padding: 12px 16px 12px 16px;
 }
 
 .deleteTask {
